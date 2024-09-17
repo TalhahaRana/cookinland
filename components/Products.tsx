@@ -27,12 +27,12 @@ export default function Component() {
       imgAlt: "Brownies",
     },
     
-    {
-      title: "Donuts",
-      description: "Delicious Italian dishes available for Rs 270 to Rs 470, perfect for a single serving. Experience the taste of Italy!",
-      imgSrc: "/4.png",
-      imgAlt: "Continental",
-    },
+    // {
+    //   title: "Donuts",
+    //   description: "Delicious Italian dishes available for Rs 270 to Rs 470, perfect for a single serving. Experience the taste of Italy!",
+    //   imgSrc: "/4.png",
+    //   imgAlt: "Continental",
+    // },
   ];
 
   const handleNext = () => {

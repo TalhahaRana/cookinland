@@ -8,7 +8,7 @@ import Blog from "@/components/Blog/blogs";
 // import Contact from "@/components/Contact";
 export default function Layout() {
   return (
-    <div className="w-full mt-20 mb-10">
+    <div className="w-full mt-10 mb-10">
       <Hero />
       <Products />
       <AboutUs />

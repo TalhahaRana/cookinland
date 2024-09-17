@@ -17,7 +17,16 @@ const App: React.FC = () => {
     };
 
     return (
+        <div>
+            <div className="container mx-auto px-4 gap-8 items-center my-6 note">
+            <div className="text-center md:text-left pl-4 items-center">
+              <p className="text-lg md:text-xl mb-5items-center">
+              We support Palestine that's why we're boycotting pro isra*ell products.
+             </p>
+            </div>
+          </div>
         <div className="container mx-auto p-4">
+            
             <nav className="items-center justify-center mb-8 relative">
                 <div className="flex items-center">
                     <img src="/logo.png" alt="coffee and pastries" className='w-12 md:w-14 h-auto'/>
@@ -45,13 +54,7 @@ const App: React.FC = () => {
                     <li><a href="/ContactUs" className="block py-2 md:py-0 hover:text-brown-900 text-right">Contact</a></li>
                 </ul> */}
             </nav>
-            <div className="container mx-auto px-4 gap-8 items-center my-6 note">
-            <div className="text-center md:text-left pl-4 items-center">
-              <p className="text-lg md:text-xl mb-5items-center">
-              We support Palestine that's why we're boycotting pro isra*ell products.
-             </p>
-            </div>
-          </div>
+            
             <div className="content flex flex-col md:flex-row items-center">
                 <div className="text md:w-1/2 mb-6 md:mb-0">
                     <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brown-800 mb-4">
@@ -72,6 +75,8 @@ const App: React.FC = () => {
                 </div>
             </div>
         </div>
+        </div>
+        
     );
 }
 
