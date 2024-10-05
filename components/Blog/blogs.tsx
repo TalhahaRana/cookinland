@@ -10,7 +10,6 @@ export default function Component() {
     <section className="w-full py-8">
       <div className="container px-4 md:px-6">
         <div className="space-y-8">
-
           <div className="mx-auto max-w-md space-y-4 text-center">
             <h3 className="text-2xl font-bold">Stay Updated with CookinLand</h3>
             <p className="text-muted-foreground">Subscribe to our newsletter to get the latest recipes and updates.</p>
