@@ -1,4 +1,3 @@
-import About from "@/components/AboutUs/MainComponent"
 import ContactUs from "@/components/ContactUs/Contact"
 import Footer from "@/components/Footer";
 import React from "react";

@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
 import Link from "next/link";
-import './styles.css';
+// import '';
 
 export default function Component() {
   const [scrollY, setScrollY] = useState(0);
@@ -27,7 +27,7 @@ export default function Component() {
             <li><a href="/">Home</a></li>
             <li><a href="/">Menu</a></li>
             <li><a href="/aboutus">About</a></li>
-            <li><a href="/ContactUs">Contact</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </nav>
 

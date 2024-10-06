@@ -20,7 +20,7 @@ export default function Footer() {
             <li><Link href="/" className="hover:underline" prefetch={false}>Home</Link></li>
             <li><Link href="/menu" className="hover:underline" prefetch={false}>Menu</Link></li>
             <li><Link href="#" className="hover:underline" prefetch={false}>About</Link></li>
-            <li><Link href="/ContactUs" className="hover:underline" prefetch={false}>Contact</Link></li>
+            <li><Link href="/contact" className="hover:underline" prefetch={false}>Contact</Link></li>
           </ul>
         </nav>
       </div>

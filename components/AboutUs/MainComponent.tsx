@@ -35,7 +35,7 @@ export default function Component() {
                 <li><a href="/">Home</a></li>
                 <li><a href="/">Menu</a></li>
                 <li><a href="/aboutus">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </nav>
         <section className="relative h-[80vh] w-full overflow-hidden">

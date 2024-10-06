@@ -36,7 +36,7 @@ const App: React.FC = () => {
                     <li><a href="/" className="block py-2 md:py-0 hover:text-brown-900 text-right">Home</a></li>
                     <li><a href="/menu" className="block py-2 md:py-0 hover:text-brown-900 text-right">Menu</a></li>
                     <li><a href="/aboutus" className="block py-2 md:py-0 hover:text-brown-900 text-right">About</a></li>
-                    <li><a href="/ContactUs" className="block py-2 md:py-0 hover:text-brown-900 text-right">Contact</a></li>
+                    <li><a href="/contact" className="block py-2 md:py-0 hover:text-brown-900 text-right">Contact</a></li>
                 </ul>
                 {/* Hamburger button for mobile and iPad screens */}
                 {/* <div className="md:hidden">
