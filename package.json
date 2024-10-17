@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-checkbox": "^1.1.1",
     "@radix-ui/react-dialog": "^1.1.1",
@@ -22,6 +23,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "drei": "^0.0.45",
+    "emailjs-com": "^3.2.0",
     "embla-carousel-react": "^8.2.0",
     "lib-utils-ts": "^0.0.0-test",
     "next": "^14.2.6",

@@ -1,8 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { ParallaxProvider, Parallax } from "react-scroll-parallax";
-import Link from "next/link";
-// import '';
+import emailjs from 'emailjs-com'; // Import emailjs
 
 export default function Component() {
   const [scrollY, setScrollY] = useState(0);
@@ -15,6 +14,21 @@ export default function Component() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_vffwejm', 'template_9r6ra2r', e.target as HTMLFormElement, 'qMO4z9dcCdKBWeM3_')
+      .then((result) => {
+          console.log(result.text);
+          alert('Email sent successfully!');
+      }, (error) => {
+          console.log(error.text);
+          alert('Error in sending email.');
+      });
+
+    (e.target as HTMLFormElement).reset(); // Reset form after submission
+  };
 
   return (
     <ParallaxProvider>
@@ -34,12 +48,13 @@ export default function Component() {
         {/* Contact Us Section */}
         <section id="contact" className="relative h-auto w-full p-10 bg-[--background] text-white">
           <h2 className="text-4xl font-bold text-center mb-6">Contact Us</h2>
-          <form className="max-w-xl mx-auto space-y-4">
+          <form className="max-w-xl mx-auto space-y-4" onSubmit={sendEmail}>
             <div>
               <label htmlFor="name" className="block text-sm font-medium">Name</label>
               <input
                 type="text"
                 id="name"
+                name="name"
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-opacity-50"
                 placeholder="Your Name"
                 required
@@ -50,6 +65,7 @@ export default function Component() {
               <input
                 type="email"
                 id="email"
+                name="email"
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-opacity-50"
                 placeholder="Your Email"
                 required
@@ -59,6 +75,7 @@ export default function Component() {
               <label htmlFor="message" className="block text-sm font-medium">Message</label>
               <textarea
                 id="message"
+                name="message"
                 rows={4}
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-opacity-50"
                 placeholder="Your Message"
