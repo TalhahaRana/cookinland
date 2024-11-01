@@ -4,16 +4,12 @@ export default function Component() {
       <div className="container px-4 md:px-6 flex flex-col justify-center items-center">
         <div className="grid items-center ">
           <h2 className="text-3xl text-white text-center pb-8 pt-4 font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            About CookinLand
+            About Cookinland
           </h2>
           <div className="flex items-center gap-6 px-4 lg:grid-cols-2 lg:gap-12">
             <div className="space-y-4">
               <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed  xl:text-xl/relaxed text-justify">
-                CookinLand is a premier online platform that empowers home cooks
-                and aspiring chefs to explore a world of culinary delights. With
-                a vast collection of recipes, step-by-step tutorials, and a
-                vibrant community, CookinLand is your gateway to mastering the
-                art of cooking and discovering new flavors.
+              Cookinland is a leading online platform that inspires home cooks and aspiring chefs to delve into the culinary world. With an extensive collection of recipes, detailed tutorials, and a lively community, Cookinland opens the door to mastering cooking techniques and exploring exciting new flavors.
               </p>
             </div>
             {/* <div className="grid gap-4">
