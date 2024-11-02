@@ -46,6 +46,7 @@ export default function Component() {
       name: "Dream Cake",
       description: "A delightful dream cake with layers of sweet goodness.",
       price: 1550,
+      pricee: 1550,
       image: "/Dream cake.jpg?height=200&width=300",
       toppings: ["cake"],
       rating: 4.7,
@@ -62,7 +63,7 @@ export default function Component() {
     {
       id: 5,
       name: "Cream frosting cake - 1 pound",
-      description: "Elegant fondant cake with a smooth finish for special occasions.",
+      description: "Delicate sugar details and a smooth frosting finish make this cake a delightful treat, both visually and in taste, bringing magic to every bite.",
       price: 1000,
       image: "/frost.jpg?height=200&width=300",
       toppings: ["cake"],
@@ -189,7 +190,7 @@ export default function Component() {
       id: 19,
       name: "Chicken Cheese Lasagna - personal pack",
       description: "Savory lasagna filled with chicken and gooey cheese.",
-      price: 430,
+      price: 510,
       image: "/Chicken cheese lasagna.jpg?height=200&width=300",
       toppings: ["continantal"],
       rating: 4.8,
@@ -301,15 +302,6 @@ export default function Component() {
                     <img src="/logo.png" alt="coffee and pastries" className='w-12 md:w-14 h-auto'/>
                     <a href="/" id="logo" className="text-lg md:text-xl font-bold text-brown-800 ml-1 md:ml-2">CookinLand</a>
                 </div>
-                {/* Hamburger button for mobile and iPad screens */}
-                {/* <div className="md:hidden">
-                    <button onClick={toggleMenu} className="text-brown-800 focus:outline-none">
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
-                </div> */}
-                {/* Adjusted classes for responsive column layout on smaller screens and row layout on larger screens */}
                 <ul className={` items-center md:flex md:flex-row md:space-x-2 lg:space-x-4 text-brown-700 md:static bg-brown-200 md:bg-transparent w-full md:w-auto p-4 md:p-0 md:h-auto ${isOpen ? 'top-16 right-0' : ''} transition-all duration-300 ease-in-out`}>
                     <li><a href="/" className="block py-2 md:py-0 hover:text-brown-900 text-right">Home</a></li>
                     <li><a href="/menu" className="block py-2 md:py-0 hover:text-brown-900 text-right">Menu</a></li>
@@ -568,6 +560,7 @@ export default function Component() {
                         <StarIcon className="w-4 h-4 fill-primary" />
                         <span>{item.rating.toFixed(1)}</span>
                       </div>
+                      
                       <div className="text-2xl font-bold">Rs{item.price.toFixed(2)}</div>
                     </div>
                   </CardContent>
