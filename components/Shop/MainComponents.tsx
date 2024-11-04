@@ -274,11 +274,11 @@ export default function Component() {
     name: string;
     description: string;
     price: number;
-    image: string;
+    image: string[];
     toppings: string[];
     rating: number;
   }) => {
-    setCartItems([...cartItems, item]);
+    setCartItems([...cartItems, { ...item, image: item.image[0] }]);
   };
   const handleRemoveFromCart = (itemId: number) => {
     setCartItems(cartItems.filter((item) => item.id !== itemId));
