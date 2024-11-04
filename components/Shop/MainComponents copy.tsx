@@ -88,149 +88,6 @@ export default function Component() {
       toppings: ["cake"],
       rating: 4.5,
     },
-    {
-      id: 7,
-      name: "Assorted Brownies - 9 pcs",
-      description: "3 classical, 3 hazelnuts, 3 Choco divine.",
-      price: 1050,
-      image: ["/Assorted brownies.jpg "],
-      toppings: ["brownies"],
-      rating: 4.8,
-    },
-    {
-      id: 8,
-      name: "Choco Divine Brownies - 9 pcs",
-      description: "Heavenly chocolate brownies for chocoholics.",
-      price: 1100,
-      image: ["/Choco divine brownies.jpg "],
-      toppings: ["brownies"],
-      rating: 4.8,
-    },
-    {
-      id: 9,
-      name: "Classical Fudge Brownies - 9 pcs",
-      description: "Scrumptious brownies, fudge inside, crusty outside.",
-      price: 900,
-      image: ["/Classical-Fudge-Brownies.jpg "],
-      toppings: ["brownies"],
-      rating: 4.8,
-    },
-    {
-      id: 10,
-      name: "Lotus Brownies - 6 pcs",
-      description:
-        "Our scrumptious fudge brownies topped with lotus spread for an extra crunch.",
-      price: 1080,
-      image: ["/Lotus-Brownies.jpg "],
-      toppings: ["brownies"],
-      rating: 4.8,
-    },
-    {
-      id: 11,
-      name: "Nutella Brownies - 9 pcs",
-      description: "Decadent brownies Topped with creamy Nutella.",
-      price: 1350,
-      image: ["/Nutella-brownies.jpg "],
-      toppings: ["brownies"],
-      rating: 4.8,
-    },
-    {
-      id: 12,
-      name: "Choco Divine Cookies - 12 pcs",
-      description:
-        "Satisfy your sweet cravings with the divine blend of four chocolates in every bite of these indulgent cookies! 🍫🍪 Treat yourself to a chocolate symphony like no other!",
-      price: 1250,
-      image: ["/Choco divine cookies.jpg "],
-      toppings: ["cookies"],
-      rating: 4.8,
-    },
-    {
-      id: 13,
-      name: "Classical Choco Chip Cookies - 12 pcs",
-      description:
-        "Classic and irresistible, these chocolate chip cookies are a timeless treat! 🍪🍫",
-      price: 840,
-      image: ["/Classical choco chip cookies.jpg "],
-      toppings: ["cookies"],
-      rating: 4.8,
-    },
-    {
-      id: 14,
-      name: "Nutella Stuffed Cookies - 12 pcs",
-      description:
-        "Experience pure bliss with every bite of these decadent Nutella cookies! 🍫🍪",
-      price: 1620,
-      image: ["/Nutella stuffed cookies.jpg "],
-      toppings: ["cookies"],
-      rating: 4.8,
-    },
-    {
-      id: 15,
-      name: "Oatmeal and Raisins Cookies - 12 pcs",
-      description:
-        "Indulge guilt-free in these wholesome oatmeal and raisin cookies, sweetened naturally without any white sugar! 🍪🌿 Enjoy the perfect blend of chewy oats and plump raisins in every bite!.",
-      price: 1080,
-      image: ["/Oatmeal and raisins cookies.jpg "],
-      toppings: ["cookies"],
-      rating: 4.8,
-    },
-    {
-      id: 16,
-      name: "Oreo Cheesecake Cookies - 12 pcs",
-      description:
-        "Indulge in a sweet symphony of creamy cheesecake and crumbly cookies! 🍪✨",
-      price: 1250,
-      image: ["/Oreo cheesecake cookies.jpg "],
-      toppings: ["cookies"],
-      rating: 4.8,
-    },
-    {
-      id: 17,
-      name: "Buttercream Frosting Cupcakes",
-      description: "Mini cupcakes topped with creamy buttercream frosting.",
-      price: 1000,
-      image: ["/Buttercream frosting cupcakes.jpg "],
-      toppings: ["cookies"],
-      rating: 4.8,
-    },
-    {
-      id: 18,
-      name: "Cupcakes Bouquet - 7 pcs",
-      description: "Beautifully arranged cupcakes in a bouquet style.",
-      price: 2500,
-      image: ["/Cupcakes-bouquet.jpg "],
-      toppings: ["cookies"],
-      rating: 4.8,
-    },
-    {
-      id: 19,
-      name: "Chicken Cheese Lasagna - personal pack",
-      description: "Savory lasagna filled with chicken and gooey cheese.",
-      price: 510,
-      image: ["/Chicken cheese lasagna.jpg "],
-      toppings: ["continantal"],
-      rating: 4.8,
-    },
-    {
-      id: 20,
-      name: "Singaporean rice",
-      description:
-        "A fusion dish that brings together aromatic spices, noodles, and rice for a unique flavor experience. Singaporean Rice combines stir-fried vegetables, tender chicken, and savory sauces, layered over steamed rice and topped with noodles for a delightful mix of textures.",
-      price: 350,
-      image: ["/rice.jpg "],
-      toppings: ["continantal"],
-      rating: 4.8,
-    },
-    {
-      id: 21,
-      name: "Mac n cheese",
-      description:
-        "A classic comfort food, Mac n Cheese features tender macaroni pasta enveloped in a creamy, cheesy sauce that’s rich and satisfying. The dish often includes a blend of cheeses, creating a smooth, velvety texture, and is sometimes baked with a golden, crispy topping for added crunch.",
-      price: 500,
-      image: ["/mac.jpg "],
-      toppings: ["continantal"],
-      rating: 4.8,
-    },
   ];
 
   const filteredMenu = useMemo(() => {
@@ -480,226 +337,161 @@ export default function Component() {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="bg-primary text-primary-foreground py-4">
-          <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="text-center md:text-left pl-4">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-                Want to Bite your fingers?
-              </h1>
-              <p className="text-base sm:text-lg md:text-xl mb-8">
-                Our menu will make your taste buds happy.
-              </p>
+  <section className="bg-primary text-primary-foreground py-4">
+    <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="text-center md:text-left pl-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+          Want to Bite your fingers?
+        </h1>
+        <p className="text-base sm:text-lg md:text-xl mb-8">
+          Our menu will make your taste buds happy.
+        </p>
+        <Button
+          size="lg"
+          variant="outline"
+          className="text-primary-foreground hover:bg-primary/80 border border-[#C8835A]"
+        >
+          Order Now
+        </Button>
+      </div>
+      <div className="flex justify-center">
+        <img
+          src="/location.png"
+          alt="Il Vesuvio Pizza"
+          className="rounded-lg w-full h-full max-w-sm md:max-w-md object-cover"
+        />
+      </div>
+    </div>
+
+    <div className="container mx-auto px-4 gap-8 items-center my-6 text-center md:text-left">
+      <p className="text-base sm:text-lg md:text-xl mb-5 p-3">
+        Looking for customization? We would love to help you!<br />
+        <strong>Note:</strong> We usually take pre-orders at least 24 hours in advance.
+        Please reach out to us for any help.
+      </p>
+    </div>
+  </section>
+
+  <section className="bg-background py-6">
+    <div className="container mx-auto px-4 md:px-6">
+      <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-8">
+        <div className="bg-muted p-6 rounded-lg">
+          <h2 className="text-2xl font-bold mb-4">Filters</h2>
+          <div className="grid gap-4">
+            <div>
+              <h3 className="text-lg font-medium mb-2">Choices</h3>
+              <div className="grid gap-2">
+                <Label className="flex items-center gap-2">
+                  <Checkbox checked={selectedToppings.includes("cake")} />
+                  Cake
+                </Label>
+                <Label className="flex items-center gap-2">
+                  <Checkbox checked={selectedToppings.includes("brownies")} />
+                  Brownies
+                </Label>
+                <Label className="flex items-center gap-2">
+                  <Checkbox checked={selectedToppings.includes("continantal")} />
+                  Continental
+                </Label>
+                <Label className="flex items-center gap-2">
+                  <Checkbox checked={selectedToppings.includes("cookies")} />
+                  Cookies
+                </Label>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-medium mb-2">Price Range</h3>
+              <Slider
+                value={priceRange}
+                min={10}
+                max={5000}
+                step={1}
+                className="w-full pb-2 text-[#c8835A]"
+              />
+              <div className="flex justify-between text-sm text-muted-foreground">
+                <span>Rs{priceRange[0]}</span>
+                <span>Rs{priceRange[1]}</span>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-lg font-medium mb-2">Sort By</h3>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button className="w-full border border-[#C8835A] bg-[#C8835A]">
+                    {sortBy === "featured"
+                      ? "Featured"
+                      : sortBy === "low"
+                      ? "Price: Low to High"
+                      : "Price: High to Low"}
+                    <ChevronDownIcon className="w-4 h-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuRadioGroup
+                    value={sortBy}
+                    className="bg-[#C8835A] w-44"
+                  >
+                    <DropdownMenuRadioItem value="featured">Featured</DropdownMenuRadioItem>
+                    <DropdownMenuRadioItem value="low">Price: Low to High</DropdownMenuRadioItem>
+                    <DropdownMenuRadioItem value="high">Price: High to Low</DropdownMenuRadioItem>
+                  </DropdownMenuRadioGroup>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {filteredMenu.slice(0, visibleItems).map((item) => (
+            <Card key={item.id} className="flex flex-col h-full">
+              <div className="w-full h-[300px] overflow-hidden rounded-t-lg">
+                <Carousel showThumbs={false} showStatus={false} infiniteLoop={true}>
+                  {item.image.map((image, index) => (
+                    <Image
+                      key={index}
+                      src={image.split("?")[0]}
+                      alt={item.name}
+                      width={400}
+                      height={300}
+                      className="w-full h-full object-cover rounded-t-lg"
+                    />
+                  ))}
+                </Carousel>
+              </div>
+              <CardContent className="p-4 flex-1">
+                <h3 className="text-lg font-medium mb-2">{item.name}</h3>
+                <p className="text-muted-foreground text-sm mb-4">{item.description}</p>
+                <div className="flex justify-between items-center">
+                  <div className="flex items-center gap-1 text-muted-foreground text-sm">
+                    <span className="w-4 h-4 fill-primary">★</span>
+                    <span>{item.rating.toFixed(1)}</span>
+                  </div>
+                  <div className="text-2xl font-bold">Rs{item.price.toFixed(2)}</div>
+                </div>
+              </CardContent>
+              <CardFooter className="mt-auto">
+                <Button className="w-full bg-[#c8835A] hover:bg-[#c8835A]/50">
+                  Add to Cart
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
+          {visibleItems < filteredMenu.length && (
+            <div className="flex justify-center mt-6">
               <Button
                 size="lg"
                 variant="outline"
-                className="text-primary-foreground hover:bg-primary/80 border border-[#C8835A]"
+                className="text-primary-foreground hover:bg-[#c8835A]/80 border border-[#C8835A]"
+                onClick={handleLoadMore}
               >
-                Order Now
+                Load More
               </Button>
             </div>
-            <div className="flex justify-center">
-              <img
-                src="/location.png"
-                alt="Il Vesuvio Pizza"
-                className="rounded-lg w-full h-full max-w-sm md:max-w-md object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="container mx-auto px-4 gap-8 items-center my-6 text-center md:text-left">
-            <p className="text-base sm:text-lg md:text-xl mb-5 p-3">
-              Looking for customization? We would love to help you!
-              <br />
-              <strong>Note:</strong> We usually take pre-orders at least 24
-              hours in advance. Please reach out to us for any help.
-            </p>
-          </div>
-        </section>
-
-        <section className="bg-background py-6">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-8">
-              <div className="bg-muted p-6 rounded-lg max-w-full md:max-w-md mx-auto">
-                <h2 className="text-2xl font-bold mb-4 text-center md:text-left">
-                  Filters
-                </h2>
-                <div className="grid gap-4 md:grid-cols-1">
-                  <div>
-                    <h3 className="text-lg font-medium mb-2">Choices</h3>
-                    <div className="flex flex-wrap gap-2 md:grid md:grid-cols-1">
-                      <Label className="flex items-center gap-2">
-                        <Checkbox
-                          checked={selectedToppings.includes("cake")}
-                          onCheckedChange={() =>
-                            setSelectedToppings((prev) =>
-                              prev.includes("cake")
-                                ? prev.filter((t) => t !== "cake")
-                                : [...prev, "cake"]
-                            )
-                          }
-                        />
-                        Cake
-                      </Label>
-                      <Label className="flex items-center gap-2">
-                        <Checkbox
-                          checked={selectedToppings.includes("brownies")}
-                          onCheckedChange={() =>
-                            setSelectedToppings((prev) =>
-                              prev.includes("brownies")
-                                ? prev.filter((t) => t !== "brownies")
-                                : [...prev, "brownies"]
-                            )
-                          }
-                        />
-                        Brownies
-                      </Label>
-                      <Label className="flex items-center gap-2">
-                        <Checkbox
-                          checked={selectedToppings.includes("continantal")}
-                          onCheckedChange={() =>
-                            setSelectedToppings((prev) =>
-                              prev.includes("continantal")
-                                ? prev.filter((t) => t !== "continantal")
-                                : [...prev, "continantal"]
-                            )
-                          }
-                        />
-                        Continental
-                      </Label>
-                      <Label className="flex items-center gap-2">
-                        <Checkbox
-                          checked={selectedToppings.includes("cookies")}
-                          onCheckedChange={() =>
-                            setSelectedToppings((prev) =>
-                              prev.includes("cookies")
-                                ? prev.filter((t) => t !== "cookies")
-                                : [...prev, "cookies"]
-                            )
-                          }
-                        />
-                        Cookies
-                      </Label>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-medium mb-2">Price Range</h3>
-                    <Slider
-                      value={priceRange}
-                      onValueChange={setPriceRange}
-                      min={10}
-                      max={5000}
-                      step={1}
-                      className="w-full text-[#c8835A] pb-2"
-                    />
-                    <div className="flex justify-between text-sm text-muted-foreground">
-                      <span>Rs{priceRange[0]}</span>
-                      <span>Rs{priceRange[1]}</span>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-medium mb-2">Sort By</h3>
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <Button
-                          variant="outline"
-                          className="w-full justify-between border border-[#C8835A] bg-[#C8835A] text-white"
-                        >
-                          {sortBy === "featured"
-                            ? "Featured"
-                            : sortBy === "low"
-                            ? "Price: Low to High"
-                            : "Price: High to Low"}
-                          <ChevronDownIcon className="w-4 h-4" />
-                        </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent align="end">
-                        <DropdownMenuRadioGroup
-                          value={sortBy}
-                          onValueChange={setSortBy}
-                          className="bg-[#C8835A] w-44"
-                        >
-                          <DropdownMenuRadioItem value="featured">
-                            Featured
-                          </DropdownMenuRadioItem>
-                          <DropdownMenuRadioItem value="low">
-                            Price: Low to High
-                          </DropdownMenuRadioItem>
-                          <DropdownMenuRadioItem value="high">
-                            Price: High to Low
-                          </DropdownMenuRadioItem>
-                        </DropdownMenuRadioGroup>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {filteredMenu.slice(0, visibleItems).map((item) => (
-                  <Card key={item.id} className="flex flex-col h-full">
-                    <div className="w-full h-[300px] overflow-hidden rounded-t-lg">
-                      <Carousel
-                        showThumbs={false}
-                        showStatus={false}
-                        infiniteLoop={true}
-                      >
-                        {item.image.map((image, index) => (
-                          <Image
-                            key={index}
-                            src={image.split("?")[0]}
-                            alt={item.name}
-                            width={400}
-                            height={300}
-                            className="w-full h-full object-cover rounded-t-lg"
-                          />
-                        ))}
-                      </Carousel>
-                    </div>
-                    <CardContent className="p-4 flex-1">
-                      <h3 className="text-lg font-medium mb-2">{item.name}</h3>
-                      <p className="text-muted-foreground text-sm mb-4">
-                        {item.description}
-                      </p>
-                      <div className="flex justify-between items-center">
-                        <div className="flex items-center gap-1 text-muted-foreground text-sm">
-                          <span className="w-4 h-4 fill-primary">★</span>
-                          <span>{item.rating.toFixed(1)}</span>
-                        </div>
-                        <div className="text-2xl font-bold">
-                          Rs{item.price.toFixed(2)}
-                        </div>
-                      </div>
-                    </CardContent>
-                    <CardFooter className="mt-auto">
-                      <Button
-                        size="sm"
-                        className="w-full bg-[#c8835A] hover:bg-[#c8835A]/50"
-                        onClick={() => handleAddToCart(item)}
-                      >
-                        Add to Cart
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                ))}
-                {visibleItems < filteredMenu.length && (
-                  <div className="flex justify-center mt-6">
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="text-primary-foreground hover:bg-[#c8835A]/80 border border-[#C8835A]"
-                      onClick={handleLoadMore}
-                    >
-                      Load More
-                    </Button>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
       <Drawer open={isCartOpen} onOpenChange={setIsCartOpen}>
         <DrawerContent className="bg-[#c88535] p-6 w-full max-w-md">

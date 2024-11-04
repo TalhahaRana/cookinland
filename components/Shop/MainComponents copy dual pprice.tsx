@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useMemo, JSX, SVGProps } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -22,11 +21,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 export default function Component() {
   const [selectedToppings, setSelectedToppings] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState("featured");
+  const [selectedSize, setSelectedSize] = useState<{ [id: number]: string }>({});
   const [priceRange, setPriceRange] = useState<number[]>([10, 5000]);
   const [visibleItems, setVisibleItems] = useState(6);
-  const handleLoadMore = () => {
-    setVisibleItems((prevVisibleItems) => prevVisibleItems + 6); // Load 6 more items on each click
-  };
+  
 
   const menu = [
     {
@@ -35,28 +33,32 @@ export default function Component() {
       description:
         "Delicious buttercream frosting cake perfect for celebrations.",
       price: 1300,
-      image: ["/Buttercream-froasting-cake.jpg"],
+      image: "/Buttercream-froasting-cake.jpg",
       toppings: ["cake"],
       rating: 4.8,
+      sizes: [{ size: "Standard", price: 1300 }],
     },
     {
       id: 2,
       name: "Chocolate Cake",
       description: "Rich and decadent chocolate cake, a classic favorite.",
       price: 2000,
-      image: ["/chocolate-cake.jpg "],
+      image: "/chocolate-cake.jpg?height=200&width=300",
       toppings: ["cake"],
       rating: 4.6,
+      sizes: [{ size: "Standard", price: 1300 }],
     },
     {
       id: 3,
       name: "Dream Cake",
       description: "A delightful dream cake with layers of sweet goodness.",
-      price: 1550,
-      pricee: 1550,
-      image: ["/Dream cake.jpg "],
+      images: ["/Dream cake.jpg", "/Dream cake2.jpg"],
       toppings: ["cake"],
       rating: 4.7,
+      sizes: [
+        { size: "Personal tin", price: 850 },
+        { size: "Family tin", price: 1550 },
+      ],
     },
     {
       id: 4,
@@ -64,172 +66,10 @@ export default function Component() {
       description:
         "Elegant fondant cake with a smooth finish for special occasions.",
       price: 1500,
-      image: ["/Fondant cake.jpg "],
+      image: "/Fondant cake.jpg?height=200&width=300",
       toppings: ["cake"],
       rating: 4.9,
-    },
-    {
-      id: 5,
-      name: "Cream frosting cake - 1 pound",
-      description:
-        "Delicate sugar details and a smooth frosting finish make this cake a delightful treat, both visually and in taste, bringing magic to every bite.",
-      price: 1000,
-      image: ["/frost.jpg "],
-      toppings: ["cake"],
-      rating: 4.9,
-    },
-    {
-      id: 6,
-      name: "Red Velvet Cake",
-      description:
-        "Classic red velvet cake with a rich and smooth cream cheese frosting.",
-      price: 2200,
-      image: ["/Red velvet cake.jpg "],
-      toppings: ["cake"],
-      rating: 4.5,
-    },
-    {
-      id: 7,
-      name: "Assorted Brownies - 9 pcs",
-      description: "3 classical, 3 hazelnuts, 3 Choco divine.",
-      price: 1050,
-      image: ["/Assorted brownies.jpg "],
-      toppings: ["brownies"],
-      rating: 4.8,
-    },
-    {
-      id: 8,
-      name: "Choco Divine Brownies - 9 pcs",
-      description: "Heavenly chocolate brownies for chocoholics.",
-      price: 1100,
-      image: ["/Choco divine brownies.jpg "],
-      toppings: ["brownies"],
-      rating: 4.8,
-    },
-    {
-      id: 9,
-      name: "Classical Fudge Brownies - 9 pcs",
-      description: "Scrumptious brownies, fudge inside, crusty outside.",
-      price: 900,
-      image: ["/Classical-Fudge-Brownies.jpg "],
-      toppings: ["brownies"],
-      rating: 4.8,
-    },
-    {
-      id: 10,
-      name: "Lotus Brownies - 6 pcs",
-      description:
-        "Our scrumptious fudge brownies topped with lotus spread for an extra crunch.",
-      price: 1080,
-      image: ["/Lotus-Brownies.jpg "],
-      toppings: ["brownies"],
-      rating: 4.8,
-    },
-    {
-      id: 11,
-      name: "Nutella Brownies - 9 pcs",
-      description: "Decadent brownies Topped with creamy Nutella.",
-      price: 1350,
-      image: ["/Nutella-brownies.jpg "],
-      toppings: ["brownies"],
-      rating: 4.8,
-    },
-    {
-      id: 12,
-      name: "Choco Divine Cookies - 12 pcs",
-      description:
-        "Satisfy your sweet cravings with the divine blend of four chocolates in every bite of these indulgent cookies! 🍫🍪 Treat yourself to a chocolate symphony like no other!",
-      price: 1250,
-      image: ["/Choco divine cookies.jpg "],
-      toppings: ["cookies"],
-      rating: 4.8,
-    },
-    {
-      id: 13,
-      name: "Classical Choco Chip Cookies - 12 pcs",
-      description:
-        "Classic and irresistible, these chocolate chip cookies are a timeless treat! 🍪🍫",
-      price: 840,
-      image: ["/Classical choco chip cookies.jpg "],
-      toppings: ["cookies"],
-      rating: 4.8,
-    },
-    {
-      id: 14,
-      name: "Nutella Stuffed Cookies - 12 pcs",
-      description:
-        "Experience pure bliss with every bite of these decadent Nutella cookies! 🍫🍪",
-      price: 1620,
-      image: ["/Nutella stuffed cookies.jpg "],
-      toppings: ["cookies"],
-      rating: 4.8,
-    },
-    {
-      id: 15,
-      name: "Oatmeal and Raisins Cookies - 12 pcs",
-      description:
-        "Indulge guilt-free in these wholesome oatmeal and raisin cookies, sweetened naturally without any white sugar! 🍪🌿 Enjoy the perfect blend of chewy oats and plump raisins in every bite!.",
-      price: 1080,
-      image: ["/Oatmeal and raisins cookies.jpg "],
-      toppings: ["cookies"],
-      rating: 4.8,
-    },
-    {
-      id: 16,
-      name: "Oreo Cheesecake Cookies - 12 pcs",
-      description:
-        "Indulge in a sweet symphony of creamy cheesecake and crumbly cookies! 🍪✨",
-      price: 1250,
-      image: ["/Oreo cheesecake cookies.jpg "],
-      toppings: ["cookies"],
-      rating: 4.8,
-    },
-    {
-      id: 17,
-      name: "Buttercream Frosting Cupcakes",
-      description: "Mini cupcakes topped with creamy buttercream frosting.",
-      price: 1000,
-      image: ["/Buttercream frosting cupcakes.jpg "],
-      toppings: ["cookies"],
-      rating: 4.8,
-    },
-    {
-      id: 18,
-      name: "Cupcakes Bouquet - 7 pcs",
-      description: "Beautifully arranged cupcakes in a bouquet style.",
-      price: 2500,
-      image: ["/Cupcakes-bouquet.jpg "],
-      toppings: ["cookies"],
-      rating: 4.8,
-    },
-    {
-      id: 19,
-      name: "Chicken Cheese Lasagna - personal pack",
-      description: "Savory lasagna filled with chicken and gooey cheese.",
-      price: 510,
-      image: ["/Chicken cheese lasagna.jpg "],
-      toppings: ["continantal"],
-      rating: 4.8,
-    },
-    {
-      id: 20,
-      name: "Singaporean rice",
-      description:
-        "A fusion dish that brings together aromatic spices, noodles, and rice for a unique flavor experience. Singaporean Rice combines stir-fried vegetables, tender chicken, and savory sauces, layered over steamed rice and topped with noodles for a delightful mix of textures.",
-      price: 350,
-      image: ["/rice.jpg "],
-      toppings: ["continantal"],
-      rating: 4.8,
-    },
-    {
-      id: 21,
-      name: "Mac n cheese",
-      description:
-        "A classic comfort food, Mac n Cheese features tender macaroni pasta enveloped in a creamy, cheesy sauce that’s rich and satisfying. The dish often includes a blend of cheeses, creating a smooth, velvety texture, and is sometimes baked with a golden, crispy topping for added crunch.",
-      price: 500,
-      image: ["/mac.jpg "],
-      toppings: ["continantal"],
-      rating: 4.8,
+      sizes: [{ size: "Standard", price: 1300 }],
     },
   ];
 
@@ -240,46 +80,59 @@ export default function Component() {
           ? true
           : selectedToppings.every((topping) => item.toppings.includes(topping))
       )
-      .filter(
-        (item) => item.price >= priceRange[0] && item.price <= priceRange[1]
-      )
+      .filter((item) => {
+        const selectedPrice = selectedSize[item.id]
+          ? item.sizes.find((s) => s.size === selectedSize[item.id])?.price ?? 0
+          : item.sizes[0].price ?? 0;
+        return selectedPrice >= priceRange[0] && selectedPrice <= priceRange[1];
+      })
       .sort((a, b) => {
         switch (sortBy) {
           case "featured":
             return b.rating - a.rating;
           case "low":
-            return a.price - b.price;
+            return (a.sizes[0].price ?? 0) - (b.sizes[0].price ?? 0);
           case "high":
-            return b.price - a.price;
+            return (b.sizes[0].price ?? 0) - (a.sizes[0].price ?? 0);
           default:
             return 0;
         }
       });
-  }, [selectedToppings, sortBy, priceRange]);
+  }, [selectedToppings, sortBy, priceRange, selectedSize]);
+  const visibleItemsToShow = Math.min(visibleItems, filteredMenu.length);
+  const handleLoadMore = () => setVisibleItems((prev) => prev + 6);
+
   const [cartItems, setCartItems] = useState<
     {
       id: number;
       name: string;
       description: string;
       price: number;
-      image: string;
+      image?: string;
       toppings: string[];
       rating: number;
     }[]
   >([]);
+
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   const handleAddToCart = (item: {
     id: number;
     name: string;
     description: string;
-    price: number;
-    image: string;
+    price?: number;
+    image?: string;
     toppings: string[];
     rating: number;
   }) => {
-    setCartItems([...cartItems, item]);
+    // Set a default price (e.g., 0) if `price` is undefined
+    const itemWithDefaultPrice = {
+      ...item,
+      price: item.price ?? 0,
+    };
+    setCartItems([...cartItems, itemWithDefaultPrice]);
   };
+
   const handleRemoveFromCart = (itemId: number) => {
     setCartItems(cartItems.filter((item) => item.id !== itemId));
   };
@@ -293,6 +146,7 @@ export default function Component() {
   };
 
   const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
+
   const [userDetails, setUserDetails] = useState({
     name: "",
     phone: "",
@@ -301,19 +155,18 @@ export default function Component() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   // Handle form input changes
-  const handleInputChange = (e: { target: { name: any; value: any } }) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setUserDetails((prevDetails) => ({
-      ...prevDetails,
-      [name]: value,
-    }));
+    setUserDetails((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setCartItems([]); // Clear the cart
-    setIsCheckoutOpen(false); // Close checkout form
-    setIsSubmitted(true); // Show success message
+    setCartItems([]);
+    setIsCheckoutOpen(false);
+    setIsSubmitted(true);
   };
 
   const handleCheckout = () => {
@@ -480,13 +333,13 @@ export default function Component() {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="bg-primary text-primary-foreground py-4">
+        <section className="bg-primary text-primary-foreground py-4 ">
           <div className="container mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="text-center md:text-left pl-4">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
                 Want to Bite your fingers?
               </h1>
-              <p className="text-base sm:text-lg md:text-xl mb-8">
+              <p className="text-lg md:text-xl mb-8">
                 Our menu will make your taste buds happy.
               </p>
               <Button
@@ -497,36 +350,38 @@ export default function Component() {
                 Order Now
               </Button>
             </div>
-            <div className="flex justify-center">
+            <div>
               <img
                 src="/location.png"
                 alt="Il Vesuvio Pizza"
-                className="rounded-lg w-full h-full max-w-sm md:max-w-md object-cover"
+                width="600"
+                height="400"
+                className="rounded-lg"
+                style={{ aspectRatio: "800/480", objectFit: "cover" }}
               />
             </div>
           </div>
 
-          <div className="container mx-auto px-4 gap-8 items-center my-6 text-center md:text-left">
-            <p className="text-base sm:text-lg md:text-xl mb-5 p-3">
-              Looking for customization? We would love to help you!
-              <br />
-              <strong>Note:</strong> We usually take pre-orders at least 24
-              hours in advance. Please reach out to us for any help.
-            </p>
+          <div className="container mx-auto px-4 gap-8 items-center my-6 note">
+            <div className="text-center md:text-left pl-4 items-center">
+              <p className="text-lg md:text-xl mb-5items-center">
+                Looking for customization? We would love to help you!.
+                <br />
+                Note : We usually take pre orders at least, 24 hours before.
+                Please reach out to us for any help.
+              </p>
+            </div>
           </div>
         </section>
-
         <section className="bg-background py-6">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-8">
-              <div className="bg-muted p-6 rounded-lg max-w-full md:max-w-md mx-auto">
-                <h2 className="text-2xl font-bold mb-4 text-center md:text-left">
-                  Filters
-                </h2>
-                <div className="grid gap-4 md:grid-cols-1">
+              <div className="bg-muted p-6 rounded-lg">
+                <h2 className="text-2xl font-bold mb-4">Filters</h2>
+                <div className="grid gap-4">
                   <div>
                     <h3 className="text-lg font-medium mb-2">Choices</h3>
-                    <div className="flex flex-wrap gap-2 md:grid md:grid-cols-1">
+                    <div className="grid gap-2 search-filter">
                       <Label className="flex items-center gap-2">
                         <Checkbox
                           checked={selectedToppings.includes("cake")}
@@ -581,7 +436,6 @@ export default function Component() {
                       </Label>
                     </div>
                   </div>
-
                   <div>
                     <h3 className="text-lg font-medium mb-2">Price Range</h3>
                     <Slider
@@ -597,14 +451,13 @@ export default function Component() {
                       <span>Rs{priceRange[1]}</span>
                     </div>
                   </div>
-
                   <div>
                     <h3 className="text-lg font-medium mb-2">Sort By</h3>
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
                         <Button
                           variant="outline"
-                          className="w-full justify-between border border-[#C8835A] bg-[#C8835A] text-white"
+                          className="w-full justify-between border border-[#C8835A] bg-[#C8835A]"
                         >
                           {sortBy === "featured"
                             ? "Featured"
@@ -618,7 +471,7 @@ export default function Component() {
                         <DropdownMenuRadioGroup
                           value={sortBy}
                           onValueChange={setSortBy}
-                          className="bg-[#C8835A] w-44"
+                          className="bg-[#C8835A] w-44 "
                         >
                           <DropdownMenuRadioItem value="featured">
                             Featured
@@ -635,27 +488,17 @@ export default function Component() {
                   </div>
                 </div>
               </div>
-
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {filteredMenu.slice(0, visibleItems).map((item) => (
+                {/* Render only visible items */}
+                {filteredMenu.slice(0, visibleItemsToShow).map((item) => (
                   <Card key={item.id} className="flex flex-col h-full">
-                    <div className="w-full h-[300px] overflow-hidden rounded-t-lg">
-                      <Carousel
-                        showThumbs={false}
-                        showStatus={false}
-                        infiniteLoop={true}
-                      >
-                        {item.image.map((image, index) => (
-                          <Image
-                            key={index}
-                            src={image.split("?")[0]}
-                            alt={item.name}
-                            width={400}
-                            height={300}
-                            className="w-full h-full object-cover rounded-t-lg"
-                          />
-                        ))}
-                      </Carousel>
+                    {/* Image container with fixed size */}
+                    <div className="w-full h-[350px]">
+                      <img
+                        src={item.image}
+                        alt={item.name}
+                        className="w-full h-full object-cover rounded-t-lg"
+                      />
                     </div>
                     <CardContent className="p-4 flex-1">
                       <h3 className="text-lg font-medium mb-2">{item.name}</h3>
@@ -664,14 +507,15 @@ export default function Component() {
                       </p>
                       <div className="flex justify-between items-center">
                         <div className="flex items-center gap-1 text-muted-foreground text-sm">
-                          <span className="w-4 h-4 fill-primary">★</span>
+                          <StarIcon className="w-4 h-4 fill-primary" />
                           <span>{item.rating.toFixed(1)}</span>
-                        </div>
-                        <div className="text-2xl font-bold">
-                          Rs{item.price.toFixed(2)}
+                          <span>
+                                RS{item.price?.toFixed(2) ?? "0.00"}
+                              </span>
                         </div>
                       </div>
                     </CardContent>
+                    {/* Add to Cart button pinned to the bottom */}
                     <CardFooter className="mt-auto">
                       <Button
                         size="sm"
@@ -683,8 +527,9 @@ export default function Component() {
                     </CardFooter>
                   </Card>
                 ))}
-                {visibleItems < filteredMenu.length && (
-                  <div className="flex justify-center mt-6">
+                {/* "Load More" */}
+                {visibleItemsToShow < filteredMenu.length && (
+                  <div className="flex justify-items-start mt-6">
                     <Button
                       size="lg"
                       variant="outline"
@@ -700,7 +545,6 @@ export default function Component() {
           </div>
         </section>
       </main>
-
       <Drawer open={isCartOpen} onOpenChange={setIsCartOpen}>
         <DrawerContent className="bg-[#c88535] p-6 w-full max-w-md">
           <div className="flex justify-between items-center mb-4">
