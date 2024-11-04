@@ -506,7 +506,10 @@ export default function Component() {
             </div>
           </div>
 
-          <div className="container mx-auto px-4 gap-8 items-center my-6 text-center md:text-left">
+          <div
+            className="container mx-auto px-4 gap-8 items-center my-6 text-center md:text-left"
+            style={{ marginTop: "23px" }}
+          >
             <p className="text-base sm:text-lg md:text-xl mb-5 p-3">
               Looking for customization? We would love to help you!
               <br />
@@ -516,7 +519,7 @@ export default function Component() {
           </div>
         </section>
 
-        <section className="bg-background py-6">
+        <section className="bg-background py-3">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-8">
               <div className="bg-muted p-6 rounded-lg max-w-full md:max-w-md mx-auto">
