@@ -646,14 +646,16 @@ export default function Component() {
                         infiniteLoop={true}
                       >
                         {item.image.map((image, index) => (
-                          <Image
-                            key={index}
-                            src={image.split("?")[0]}
-                            alt={item.name}
-                            width={400}
-                            height={300}
-                            className="w-full h-full object-cover rounded-t-lg"
-                          />
+                          <div className="w-full h-[350px]">
+                            <Image
+                              key={index}
+                              src={image.split("?")[0]}
+                              alt={item.name}
+                              width={400}
+                              height={300}
+                              className="w-full h-full object-cover rounded-t-lg"
+                            />
+                          </div>
                         ))}
                       </Carousel>
                     </div>
