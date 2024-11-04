@@ -657,6 +657,7 @@ export default function Component() {
                               width={400}
                               height={300}
                               className="w-full h-full object-cover rounded-t-lg"
+                              style={{ borderRadius: "10px" }}
                             />
                           </div>
                         ))}
