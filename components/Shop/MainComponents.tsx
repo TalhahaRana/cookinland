@@ -136,74 +136,93 @@ export default function Component() {
     },
     {
       id: 12,
-      name: "Choco Divine Cookies - 12 pcs",
+      name: "Choco Divine Cookies - 6 pcs",
       description:
         "Satisfy your sweet cravings with the divine blend of four chocolates in every bite of these indulgent cookies! 🍫🍪 Treat yourself to a chocolate symphony like no other!",
-      price: 1250,
+      price: 625,
       image: ["/Choco divine cookies.jpg"],
       toppings: ["cookies"],
       rating: 4.8,
     },
     {
       id: 13,
-      name: "Classical Choco Chip Cookies - 12 pcs",
+      name: "Classical Choco Chip Cookies - 6 pcs",
       description:
         "Classic and irresistible, these chocolate chip cookies are a timeless treat! 🍪🍫",
-      price: 840,
+      price: 420,
       image: ["/Classical choco chip cookies.jpg"],
       toppings: ["cookies"],
       rating: 4.8,
     },
     {
       id: 14,
-      name: "Nutella Stuffed Cookies - 12 pcs",
+      name: "Nutella Stuffed Cookies - 6 pcs",
       description:
         "Experience pure bliss with every bite of these decadent Nutella cookies! 🍫🍪",
-      price: 1620,
+      price: 810,
       image: ["/Nutella stuffed cookies.jpg"],
       toppings: ["cookies"],
       rating: 4.8,
     },
     {
       id: 15,
-      name: "Oatmeal and Raisins Cookies - 12 pcs",
+      name: "Oatmeal and Raisins Cookies - 6 pcs",
       description:
         "Indulge guilt-free in these wholesome oatmeal and raisin cookies, sweetened naturally without any white sugar! 🍪🌿 Enjoy the perfect blend of chewy oats and plump raisins in every bite!.",
-      price: 1080,
+      price: 540,
       image: ["/Oatmeal and raisins cookies.jpg"],
       toppings: ["cookies"],
       rating: 4.8,
     },
     {
       id: 16,
-      name: "Oreo Cheesecake Cookies - 12 pcs",
+      name: "Oreo Cheesecake Cookies - 6 pcs",
       description:
         "Indulge in a sweet symphony of creamy cheesecake and crumbly cookies! 🍪✨",
-      price: 1250,
+      price: 625,
       image: ["/Oreo cheesecake cookies.jpg"],
       toppings: ["cookies"],
       rating: 4.8,
     },
     {
       id: 17,
-      name: "Buttercream Frosting Cupcakes",
-      description: "Mini cupcakes topped with creamy buttercream frosting.",
-      price: 1000,
-      image: ["/Buttercream frosting cupcakes.jpg"],
+      name: "Double chocolate chip cookies - 6 pcs",
+      description:
+        "Indulge in a sweet symphony of creamy cheesecake and crumbly cookies! 🍪✨",
+      price: 540,
+      image: ["/Double.jpg"],
       toppings: ["cookies"],
       rating: 4.8,
     },
     {
       id: 18,
-      name: "Cupcakes Bouquet - 7 pcs",
-      description: "Beautifully arranged cupcakes in a bouquet style.",
-      price: 2500,
-      image: ["/Cupcakes-bouquet.jpg"],
+      name: "Confetti cookie - 6 pcs",
+      description: "A joyful union of cookies, sprinkles and bunties. 🍪✨",
+      price: 480,
+      image: ["/Confetti.jpg"],
       toppings: ["cookies"],
       rating: 4.8,
     },
     {
       id: 19,
+      name: "Buttercream Frosting Cupcakes",
+      description: "Mini cupcakes topped with creamy buttercream frosting.",
+      price: 1000,
+      image: ["/Buttercream frosting cupcakes.jpg"],
+      toppings: ["Cupcakes"],
+      rating: 4.8,
+    },
+    {
+      id: 20,
+      name: "Cupcakes Bouquet - 7 pcs",
+      description: "Beautifully arranged cupcakes in a bouquet style.",
+      price: 2500,
+      image: ["/Cupcakes-bouquet.jpg"],
+      toppings: ["Cupcakes"],
+      rating: 4.8,
+    },
+    {
+      id: 21,
       name: "Chicken Cheese Lasagna - personal pack",
       description: "Savory lasagna filled with chicken and gooey cheese.",
       price: 510,
@@ -212,7 +231,7 @@ export default function Component() {
       rating: 4.8,
     },
     {
-      id: 20,
+      id: 22,
       name: "Singaporean rice",
       description:
         "A fusion dish that brings together aromatic spices, noodles, and rice for a unique flavor experience. Singaporean Rice combines stir-fried vegetables, tender chicken, and savory sauces, layered over steamed rice and topped with noodles for a delightful mix of textures.",
@@ -222,7 +241,7 @@ export default function Component() {
       rating: 4.8,
     },
     {
-      id: 21,
+      id: 23,
       name: "Mac n cheese",
       description:
         "A classic comfort food, Mac n Cheese features tender macaroni pasta enveloped in a creamy, cheesy sauce that’s rich and satisfying. The dish often includes a blend of cheeses, creating a smooth, velvety texture, and is sometimes baked with a golden, crispy topping for added crunch.",
@@ -581,6 +600,19 @@ export default function Component() {
                           }
                         />
                         Cookies
+                      </Label>
+                      <Label className="flex items-center gap-2">
+                        <Checkbox
+                          checked={selectedToppings.includes("Cupcakes")}
+                          onCheckedChange={() =>
+                            setSelectedToppings((prev) =>
+                              prev.includes("Cupcakes")
+                                ? prev.filter((t) => t !== "Cupcakes")
+                                : [...prev, "Cupcakes"]
+                            )
+                          }
+                        />
+                        Cupcakes
                       </Label>
                     </div>
                   </div>

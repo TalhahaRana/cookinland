@@ -21,7 +21,7 @@ const App: React.FC = () => {
             <div className="container mx-auto px-4 gap-8 items-center my-6 note">
             <div className="text-center md:text-left pl-4 items-center">
               <p className="text-lg md:text-xl mb-5items-center">
-              We support Palestine that's why we're boycotting pro isra*ell products.
+              Long Love Palestine.
              </p>
             </div>
           </div>
