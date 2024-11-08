@@ -21,7 +21,7 @@ const App: React.FC = () => {
             <div className="container mx-auto px-4 gap-8 items-center my-6 note">
             <div className="text-center md:text-left pl-4 items-center">
               <p className="text-lg md:text-xl mb-5items-center">
-              Long Love Palestine.
+              Long Live Palestine.
              </p>
             </div>
           </div>

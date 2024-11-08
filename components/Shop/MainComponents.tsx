@@ -138,7 +138,7 @@ export default function Component() {
       id: 12,
       name: "Choco Divine Cookies - 6 pcs",
       description:
-        "Satisfy your sweet cravings with the divine blend of four chocolates in every bite of these indulgent cookies! 🍫🍪 Treat yourself to a chocolate symphony like no other!",
+        "",
       price: 625,
       image: ["/Choco divine cookies.jpg"],
       toppings: ["cookies"],
@@ -149,7 +149,7 @@ export default function Component() {
       name: "Classical Choco Chip Cookies - 6 pcs",
       description:
         "Classic and irresistible, these chocolate chip cookies are a timeless treat! 🍪🍫",
-      price: 420,
+      price: 480,
       image: ["/Classical choco chip cookies.jpg"],
       toppings: ["cookies"],
       rating: 4.8,
@@ -199,7 +199,7 @@ export default function Component() {
       name: "Confetti cookie - 6 pcs",
       description: "A joyful union of cookies, sprinkles and bunties. 🍪✨",
       price: 480,
-      image: ["/Confetti.jpg"],
+      image: ["/Cof.jpg"],
       toppings: ["cookies"],
       rating: 4.8,
     },

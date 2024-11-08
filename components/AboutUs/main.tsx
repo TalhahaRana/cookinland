@@ -9,30 +9,43 @@ export default function Component() {
           <div className="flex items-center gap-6 px-4 lg:grid-cols-2 lg:gap-12">
             <div className="space-y-4">
               <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed  xl:text-xl/relaxed text-justify">
-              Cookinland is a leading online platform that inspires home cooks and aspiring chefs to delve into the culinary world. With an extensive collection of recipes, detailed tutorials, and a lively community, Cookinland opens the door to mastering cooking techniques and exploring exciting new flavors.
+                Cookinland was founded with a simple mission: to create
+                mouthwatering confections that put a smile on every face at
+                every occasion. With years of experience perfecting recipes and
+                techniques, we're committed to delivering exceptional taste,
+                quality, and presentation.
               </p>
             </div>
-            {/* <div className="grid gap-4">
+            <div className="grid gap-4">
               <div className="rounded-lg border border-[#C8835A] bg-card p-6 shadow-sm">
-                <h3 className="text-xl font-bold">Vast Recipe Library</h3>
+                <h3 className="text-xl font-bold">Our Values </h3>
                 <p className="text-muted-foreground">
-                  Explore our ever-growing collection of recipes spanning various cuisines, dietary preferences, and skill
-                  levels.
+                  - Quality: We use only the finest ingredients, carefully
+                  selected to ensure every bite is a delight.
+                  <br />
+                  - Creativity: Our recipes blend classic flavors with
+                  innovative twists to surprise and delight.
+                  <br />- Customer Love: Your satisfaction is our top priority;
+                  we strive to exceed expectations.
                 </p>
               </div>
               <div className="rounded-lg border border-[#C8835A] bg-card p-6 shadow-sm">
-                <h3 className="text-xl font-bold">Interactive Tutorials</h3>
+                <h3 className="text-xl font-bold">What We Offer</h3>
                 <p className="text-muted-foreground">
-                  Learn from expert chefs through our interactive video tutorials and step-by-step guides.
+                  - Custom cakes for special occasions (birthdays, weddings,
+                  graduations)
+                  <br />
+                  - Artisanal desserts (cupcakes, cookies, brownies)
+                  <br />- Seasonal treats (holiday-themed goodies)
                 </p>
               </div>
-              <div className="rounded-lg border border-[#C8835A] bg-card p-6 shadow-sm">
+              {/* <div className="rounded-lg border border-[#C8835A] bg-card p-6 shadow-sm">
                 <h3 className="text-xl font-bold">Vibrant Community</h3>
                 <p className="text-muted-foreground">
                   Connect with fellow food enthusiasts, share recipes, and engage in lively discussions.
                 </p>
-              </div>
-            </div> */}
+              </div> */}
+            </div>
           </div>
         </div>
       </div>
