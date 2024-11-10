@@ -16,35 +16,40 @@ export default function Component() {
                 quality, and presentation.
               </p>
             </div>
-            <div className="grid gap-4">
-              <div className="rounded-lg border border-[#C8835A] bg-card p-6 shadow-sm">
-                <h3 className="text-xl font-bold">Our Values </h3>
-                <p className="text-muted-foreground">
-                  - Quality: We use only the finest ingredients, carefully
-                  selected to ensure every bite is a delight.
-                  <br />
-                  - Creativity: Our recipes blend classic flavors with
-                  innovative twists to surprise and delight.
-                  <br />- Customer Love: Your satisfaction is our top priority;
-                  we strive to exceed expectations.
-                </p>
-              </div>
-              <div className="rounded-lg border border-[#C8835A] bg-card p-6 shadow-sm">
-                <h3 className="text-xl font-bold">What We Offer</h3>
-                <p className="text-muted-foreground">
-                  - Custom cakes for special occasions (birthdays, weddings,
-                  graduations)
-                  <br />
-                  - Artisanal desserts (cupcakes, cookies, brownies)
-                  <br />- Seasonal treats (holiday-themed goodies)
-                </p>
-              </div>
-              {/* <div className="rounded-lg border border-[#C8835A] bg-card p-6 shadow-sm">
-                <h3 className="text-xl font-bold">Vibrant Community</h3>
-                <p className="text-muted-foreground">
-                  Connect with fellow food enthusiasts, share recipes, and engage in lively discussions.
-                </p>
-              </div> */}
+          </div>
+        </div>
+
+        <div className="grid items-center ">
+          <h2 className="text-3xl text-white text-center pb-8 pt-4 font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            Our Values
+          </h2>
+          <div className="flex items-center gap-6 px-4 lg:grid-cols-2 lg:gap-12">
+            <div className="space-y-4">
+              <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed  xl:text-xl/relaxed text-justify">
+                - Quality: We use only the finest ingredients, carefully
+                selected to ensure every bite is a delight.
+                <br />
+                - Creativity: Our recipes blend classic flavors with innovative
+                twists to surprise and delight.
+                <br />- Customer Love: Your satisfaction is our top priority; we
+                strive to exceed expectations.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="grid items-center ">
+          <h2 className="text-3xl text-white text-center pb-8 pt-4 font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            What We Offer
+          </h2>
+          <div className="flex items-center gap-6 px-4 lg:grid-cols-2 lg:gap-12">
+            <div className="space-y-4">
+              <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed  xl:text-xl/relaxed text-justify">
+                - Custom cakes for special occasions (birthdays, weddings,
+                graduations)
+                <br />
+                - Artisanal desserts (cupcakes, cookies, brownies)
+                <br />- Seasonal treats (holiday-themed goodies)
+              </p>
             </div>
           </div>
         </div>
