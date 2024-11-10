@@ -250,6 +250,26 @@ export default function Component() {
       toppings: ["continantal"],
       rating: 4.8,
     },
+    {
+      id: 24,
+      name: "Floral cupcakes bouquet ",
+      description:
+        "Twelve beautifully handcrafted floral cupcakes wrapped in bouquet ",
+      price: 3000,
+      image: ["/Floral3.jpg"],
+      toppings: ["Cupcakes"],
+      rating: 4.8,
+    },
+    {
+      id: 25,
+      name: "Floral cupcakes bouquet",
+      description:
+        "Seven beautifully handcrafted floral cupcakes wrapped in bouquet ",
+      price: 2500,
+      image: ["/Floral1.jpg", "/Floral2.jpg"],
+      toppings: ["Cupcakes"],
+      rating: 4.8,
+    },
   ];
 
   const filteredMenu = useMemo(() => {
