@@ -13,9 +13,8 @@
 }
 
 body{
-    background: linear-gradient(to left,#2b1301
-    , #491f04
-    );
+    --angle: 45deg; 
+    background: linear-gradient(var(--angle), oklab(93.3% 0.016 0.049), oklab(89.9% 0.015 0.057), oklab(84.9% 0.017 0.067), oklab(78.7% 0.024 0.075));
     display: flex;
     height: 100vh;
 }

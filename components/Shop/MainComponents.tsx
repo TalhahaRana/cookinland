@@ -22,7 +22,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 export default function Component() {
   const [selectedToppings, setSelectedToppings] = useState<string[]>([]);
   const [sortBy, setSortBy] = useState("featured");
-  const [priceRange, setPriceRange] = useState<number[]>([10, 5000]);
+  const [priceRange, setPriceRange] = useState<number[]>([10, 9000]);
   const [visibleItems, setVisibleItems] = useState(6);
   const handleLoadMore = () => {
     setVisibleItems((prevVisibleItems) => prevVisibleItems + 6); // Load 6 more items on each click
@@ -31,10 +31,10 @@ export default function Component() {
   const menu = [
     {
       id: 1,
-      name: "Buttercream Frosting Cake",
+      name: "Buttercream Frosting Cake with Fondant Toper - 6 pounds",
       description:
-        "Delicious buttercream frosting cake perfect for celebrations.",
-      price: 1300,
+        "Delicious buttercream frosting cake perfect for celebrations. Sink into the sweetness of our velvety buttercream cakes, beautifully finished with delicate fondant toppings",
+      price: 6000,
       image: ["/Buttercream-froasting-cake.jpg"],
       toppings: ["cake"],
       rating: 4.8,
@@ -60,20 +60,20 @@ export default function Component() {
     },
     {
       id: 4,
-      name: "Fondant Cake",
+      name: "Fondant Cake - 2.5 pounds",
       description:
         "Elegant fondant cake with a smooth finish for special occasions.",
-      price: 1500,
+      price: 3600,
       image: ["/Fondant cake.jpg"],
       toppings: ["cake"],
       rating: 4.9,
     },
     {
       id: 5,
-      name: "Cream frosting cake - 1 pound",
+      name: " Fresh Cream frosting cake with Fondant Toper- 3 pound",
       description:
-        "Delicate sugar details and a smooth frosting finish make this cake a delightful treat, both visually and in taste, bringing magic to every bite.",
-      price: 1000,
+        "Delicate fondant details and a smooth frosting finish make this cake a delightful treat, both visually and in taste, bringing magic to every bite.",
+      price: 3600,
       image: ["/frost.jpg"],
       toppings: ["cake"],
       rating: 4.9,
@@ -176,7 +176,7 @@ export default function Component() {
     },
     {
       id: 16,
-      name: "Oreo Cheesecake Cookies - 6 pcs",
+      name: "Cheesecake Cookies - 6 pcs",
       description:
         "Indulge in a sweet symphony of creamy cheesecake and crumbly cookies! 🍪✨",
       price: 625,
@@ -268,6 +268,45 @@ export default function Component() {
       price: 2500,
       image: ["/Floral1.jpg", "/Floral2.jpg"],
       toppings: ["Cupcakes"],
+      rating: 4.8,
+    },
+    {
+      id: 26,
+      name: "Fresh Cream Frosting Cake - 2.5 pounds",
+      description: "Spread the love wth fresh cream",
+      price: 2200,
+      image: ["/chocolate-cake.jpg"],
+      toppings: ["cake"],
+      rating: 4.6,
+    },
+    {
+      id: 27,
+      name: "Buttercream Frosting Cake - 2.5 pounds",
+      description:
+        "Delicious buttercream perfect for celebrations. Sink into the sweetness of our velvety buttercream cakes, beautifully finished with delicate fondant toppings",
+      price: 6000,
+      image: ["/Buttercream-froasting-cake.jpg"],
+      toppings: ["cake"],
+      rating: 4.8,
+    },
+    {
+      id: 28,
+      name: "Chocolate Nuteralla Cake - 2.5 pounds",
+      description:
+        "Delicious buttercream perfect for celebrations. Sink into the sweetness of our velvety buttercream cakes, beautifully finished with delicate fondant toppings",
+      price: 3600,
+      image: ["/Buttercream-froasting-cake.jpg"],
+      toppings: ["cake"],
+      rating: 4.8,
+    },
+    {
+      id: 28,
+      name: "Chocolate Mars Cake - 3.5 pounds",
+      description:
+        "Delicious buttercream perfect for celebrations. Sink into the sweetness of our velvety buttercream cakes, beautifully finished with delicate fondant toppings",
+      price: 3600,
+      image: ["/Buttercream-froasting-cake.jpg"],
+      toppings: ["cake"],
       rating: 4.8,
     },
   ];

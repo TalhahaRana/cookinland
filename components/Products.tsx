@@ -10,13 +10,13 @@ export default function Component() {
   const slides = [
     {
       title: "Cakes",
-      description: "Delicious cakes ranging from Rs 1500 to Rs 3000. Perfect for every celebration, made with love and the finest ingredients.",
+      description: "Delicious cakes starting from low as 850Rs each only. Perfect for every celebration, made with love and the finest ingredients.",
       imgSrc: "/1.png",
       imgAlt: "Cakes",
     },
     {
       title: "Cookies",
-      description: "Enjoy our crispy and chewy cookies priced between Rs 590 and Rs 1600. A delightful treat for any time of the day.",
+      description: "Enjoy our crispy and chewy cookies starting from low as 90Rs each only. A delightful treat for any time of the day.",
       imgSrc: "/2.png",
       imgAlt: "Cookies",
     },
@@ -29,7 +29,7 @@ export default function Component() {
     
     // {
     //   title: "Donuts",
-    //   description: "Delicious Italian dishes available for Rs 270 to Rs 470, perfect for a single serving. Experience the taste of Italy!",
+    //   description: "Savor the flavor with our mouth-watering Continental dishes, crafted to delight your senses!" ",
     //   imgSrc: "/4.png",
     //   imgAlt: "Continental",
     // },
