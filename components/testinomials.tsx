@@ -5,31 +5,31 @@ const reviews = [
         imgSrc: "https://openui.fly.dev/openui/150x150.svg?text=🍰",
         altText: "cake",
         reviewText: "Her brownies are amazing l4s top is crunchy and inside it's so gooey soft with melt chocolate yummy ( keep it up).",
-        reviewerName: "name ",
+        reviewerName: "Mrs Ali",
     },
     {
         imgSrc: "https://openui.fly.dev/openui/150x150.svg?text=🍪",
         altText: "cookie",
         reviewText: "Highly addictive. You may turn into a cookie monster.Indeed one of the best things l've ever had in NN....Very much like International standard / subway cookies.Big super soft, chewy texture and mouth - wow - tring. Perfect Value of money Hopefully rates won't increase because it matches the treat it's providing.Great Job!",
-    reviewerName: "name",
+    reviewerName: "A.Shah",
   },
   {
     imgSrc: "https://openui.fly.dev/openui/150x150.svg?text=🍰",
     altText: "cake",
     reviewText: "undoubtedly very delicious. The quantity was perfect. Definitely trying it again. Highly recommended!.",
-    reviewerName: "name ",
+    reviewerName: "Saad.R",
 },
 {
     imgSrc: "https://openui.fly.dev/openui/150x150.svg?text=🍪",
     altText: "cake",
     reviewText: "It was too good (C l've never eaten such delicious homemade cookies before",
-    reviewerName: "name ",
+    reviewerName: "Zainab",
 },
 {
     imgSrc: "https://openui.fly.dev/openui/150x150.svg?text=🍪",
     altText: "cake",
     reviewText: "Order from Cookinland @one mom show delicious cookies must say some next level cookies easily can compete cookies house and subway. Must go Karachi Eat 2025",
-    reviewerName: "name ",
+    reviewerName: "H.Shah",
 },
 ];
 

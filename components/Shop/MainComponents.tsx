@@ -64,7 +64,7 @@ export default function Component() {
       description:
         "Elegant fondant cake with a smooth finish for special occasions.",
       price: 3600,
-      image: ["/Fondant cake.jpg"],
+      image: ["/Fondant cake.jpg" , "/Fondant cake 2.jpg", "/Fondant cake 3.jpg" , "/Fondant cake 4.jpg"],
       toppings: ["cake"],
       rating: 4.9,
     },
@@ -74,7 +74,7 @@ export default function Component() {
       description:
         "Delicate fondant details and a smooth frosting finish make this cake a delightful treat, both visually and in taste, bringing magic to every bite.",
       price: 3600,
-      image: ["/frost.jpg"],
+      image: ["/frost.jpg", "/Fresh Cream frosting cake with Fondant 2.jpg"],
       toppings: ["cake"],
       rating: 4.9,
     },
@@ -275,7 +275,7 @@ export default function Component() {
       name: "Fresh Cream Frosting Cake - 2.5 pounds",
       description: "Spread the love wth fresh cream",
       price: 2200,
-      image: ["/chocolate-cake.jpg"],
+      image: ["/fresh cream.jpg"],
       toppings: ["cake"],
       rating: 4.6,
     },
@@ -301,11 +301,11 @@ export default function Component() {
     },
     {
       id: 28,
-      name: "Chocolate Mars Cake - 3.5 pounds",
+      name: "Chocolate Malt Cake - 3.5 pounds",
       description:
         "Delicious buttercream perfect for celebrations. Sink into the sweetness of our velvety buttercream cakes, beautifully finished with delicate fondant toppings",
       price: 3600,
-      image: ["/Buttercream-froasting-cake.jpg"],
+      image: ["/choco malt.jpg"],
       toppings: ["cake"],
       rating: 4.8,
     },
@@ -567,13 +567,6 @@ export default function Component() {
               <p className="text-base sm:text-lg md:text-xl mb-8">
                 Our menu will make your taste buds happy.
               </p>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-primary-foreground hover:bg-primary/80 border border-[#C8835A]"
-              >
-                Order Now
-              </Button>
             </div>
             <div className="flex justify-center">
               <img

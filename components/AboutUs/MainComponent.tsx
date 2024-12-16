@@ -69,13 +69,7 @@ export default function Component() {
             <p className="max-w-3xl text-[--muted-foreground] md:text-xl">
               We are a team of passionate individuals dedicated to creating innovative solutions that empower our clients to achieve their goals.
             </p>
-            <Link
-              href="#"
-              className="inline-flex h-10 items-center justify-center rounded-md bg-[brown] px-8 text-sm font-medium text-[--primary-foreground] shadow transition-colors hover:bg-[--primary]/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-[--ring] disabled:pointer-events-none disabled:opacity-50"
-              prefetch={false}
-            >
-              Learn More
-            </Link>
+           
           </div>
         </section>
 
