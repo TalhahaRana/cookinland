@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
+import Link from "next/link";
 
 const Model = () => {
   const { scene } = useGLTF("/models/brownie.glb");
@@ -106,10 +107,19 @@ const App: React.FC = () => {
                 you wanting more. Discover flavors that will make every bite
                 unforgettable!
               </p>
+              <div className="mt-6">
+            <Link
+              href="/menu"
+              className="inline-flex h-10 items-center justify-center rounded-md bg-[#C8835A] px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-[#C8835A]/20 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
+              prefetch={false}
+            >
+              Shop Now
+            </Link>
+          </div>
             </div>
             <div className="flex justify-center">
               <img
-                src="/hero.jpeg"
+                src="/Chicken cheese lasagna.jpg"
                 alt="Il Vesuvio Pizza"
                 className="rounded-lg w-full h-full max-w-sm md:max-w-md object-cover"
               />
