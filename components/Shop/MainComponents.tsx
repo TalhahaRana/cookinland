@@ -64,7 +64,7 @@ export default function Component() {
       description:
         "Elegant fondant cake with a smooth finish for special occasions.",
       price: 3600,
-      image: ["/Fondant cake.jpg" , "/Fondant cake 2.jpg", "/Fondant cake 3.jpg" , "/Fondant cake 4.jpg"],
+      image: ["/Fondant cake.jpg" , "/Fondant cake 3.jpg" , "/Fondant cake 4.jpg"],
       toppings: ["cake"],
       rating: 4.9,
     },
@@ -74,7 +74,7 @@ export default function Component() {
       description:
         "Delicate fondant details and a smooth frosting finish make this cake a delightful treat, both visually and in taste, bringing magic to every bite.",
       price: 3600,
-      image: ["/frost.jpg", "/Fresh Cream frosting cake with Fondant 2.jpg"],
+      image: ["/frost.jpg"],
       toppings: ["cake"],
       rating: 4.9,
     },
@@ -300,12 +300,42 @@ export default function Component() {
       rating: 4.8,
     },
     {
-      id: 28,
+      id: 29,
       name: "Chocolate Malt Cake - 3.5 pounds",
       description:
         "Delicious buttercream perfect for celebrations. Sink into the sweetness of our velvety buttercream cakes, beautifully finished with delicate fondant toppings",
       price: 3600,
       image: ["/choco malt.jpg"],
+      toppings: ["cake"],
+      rating: 4.8,
+    },
+    {
+      id: 30,
+      name: " Fresh Cream frosting cake with Fondant Toper- 2.5 pound",
+      description:
+        "Delicate fondant details and a smooth frosting finish make this cake a delightful treat, both visually and in taste, bringing magic to every bite.",
+      price: 3600,
+      image: ["/Fresh Cream frosting cake with Fondant 2.jpg"],
+      toppings: ["cake"],
+      rating: 4.9,
+    },
+    {
+      id: 31,
+      name: "Fondant Cake - 2.5 pounds",
+      description:
+        "Elegant fondant cake with a smooth finish for special occasions.",
+      price: 3600,
+      image: ["/Fondant cake 2.jpg"],
+      toppings: ["cake"],
+      rating: 4.9,
+    },
+    {
+      id: 32,
+      name: "Buttercream Frosting Cake - 3 pounds",
+      description:
+        "Delicious buttercream frosting cake perfect for celebrations. Sink into the sweetness of our velvety buttercream cakes",
+      price: 4000,
+      image: ["/butter 1.jpg" , "/butter 2.jpg"],
       toppings: ["cake"],
       rating: 4.8,
     },
