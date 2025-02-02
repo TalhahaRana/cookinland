@@ -60,7 +60,7 @@ export default function Component() {
     },
     {
       id: 4,
-      name: "Fondant Cake - 2.5 pounds",
+      name: "Fondant cake, with Vanilla / Butterscotch / Caramel flavor - 2.5 pounds",
       description:
         "Elegant fondant cake with a smooth finish for special occasions.",
       price: 3600,
@@ -70,10 +70,10 @@ export default function Component() {
     },
     {
       id: 5,
-      name: " Fresh Cream frosting cake with Fondant Toper- 3 pound",
+      name: " Fresh cream frosting, chocolate fudge cake with fondant and rice paper toppers - 3 pound",
       description:
         "Delicate fondant details and a smooth frosting finish make this cake a delightful treat, both visually and in taste, bringing magic to every bite.",
-      price: 3600,
+      price: 4000,
       image: ["/frost.jpg"],
       toppings: ["cake"],
       rating: 4.9,
@@ -139,7 +139,7 @@ export default function Component() {
       name: "Choco Divine Cookies - 6 pcs",
       description:
         "",
-      price: 625,
+      price: 660,
       image: ["/Choco divine cookies.jpg"],
       toppings: ["cookies"],
       rating: 4.8,
@@ -189,7 +189,7 @@ export default function Component() {
       name: "Double chocolate chip cookies - 6 pcs",
       description:
         "Indulge in a sweet symphony of creamy cheesecake and crumbly cookies! 🍪✨",
-      price: 540,
+      price: 660,
       image: ["/Double.jpg"],
       toppings: ["cookies"],
       rating: 4.8,
@@ -338,6 +338,16 @@ export default function Component() {
       image: ["/butter 1.jpg" , "/butter 2.jpg"],
       toppings: ["cake"],
       rating: 4.8,
+    },
+    {
+      id: 33,
+      name: "Nutella cake - 1 pounds",
+      description:
+        "Delicious Nutella cake perfect for celebrations. Sink into the sweetness of our velvety Nutella cakes",
+      price: 1700,
+      image: ["/Nutella cake.jpg"],
+      toppings: ["cake"],
+      rating: 4.9,
     },
   ];
 
